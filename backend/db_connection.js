@@ -19,12 +19,4 @@ const client = new Client({
     console.error('Erro ao conectar com o PostgreSQL', err);
   });
 
-  client.query('SELECT * FROM financas')
-  .then((result) => {
-    console.log('Resultado da consulta:', result.rows);
-  })
-  .catch((err) => {
-    console.error('Erro ao executar a consulta', err);
-  });
-
   module.exports = client;
